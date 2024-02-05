@@ -1,0 +1,61 @@
+:root{
+    --nav-bg-color: black;
+    --body-bg-color: #16151d;
+    --text-color: white;
+    --logo-color: white;
+    --search-bar-bg: #17151b;
+    --search-border: #23202a;
+    --nav-bg-blue: #913fe2;
+    --li-blue-color: white;
+    --box-bg-color: #222;
+    --border-bottom-color: #312f40;
+    --border-color: rgb(90, 90, 90);
+    --pop-time-bg: #333;
+}
+.lightmode{
+    --nav-bg-color: white;
+    --body-bg-color: #eef0f2;
+    --text-color: black;
+    --logo-color: black;
+    --search-bar-bg: white;
+    --search-border: #ccc;
+    --li-blue-color: white;
+    --box-bg-color: white;
+    --border-bottom-color: #cdc9e9;
+    --border-color: rgb(68, 0, 255);
+    --pop-time-bg: #e4e2e2;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.Overview{
+    width: 70%;
+}
+.path{
+    width: 100%;
+    background-color: var(--box-bg-color);
+    border-radius: 3px;
+    color: var(--text-color);
+    display: flex;
+    padding: 5px;
+    gap: 5px;
+}
+.path a{
+    color: var(--text-color);
+}
+.path a:hover{
+    color: #913fe2;
+}
+@media (max-width: 425px) {
+    .path{
+        width: 100%;
+    }
+}
+.manhwa-overview{
+    width: 100%;
+    margin-top: 10px;
+    background-color: var(--box-bg-color);
+}

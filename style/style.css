@@ -14,6 +14,8 @@
     --li-blue-color: white;
     --box-bg-color: #222;
     --border-bottom-color: #312f40;
+    --border-color: rgb(90, 90, 90);
+    --pop-time-bg: #333;
 }
 .lightmode{
     --nav-bg-color: white;
@@ -25,6 +27,8 @@
     --li-blue-color: white;
     --box-bg-color: white;
     --border-bottom-color: #cdc9e9;
+    --border-color: rgb(68, 0, 255);
+    --pop-time-bg: #e4e2e2;
 }
 
 a{
@@ -153,9 +157,9 @@ body{
 
 /*Mobile view top nav*/
 
-@media (max-width: 320px) {
+@media (max-width: 425px) {
     .centernav{
-        max-width: 310px;
+        max-width: 410px;
         margin: 0 auto;
         height: 50px;
     }
@@ -166,7 +170,7 @@ body{
     }
     .search-holder{
         height: 25px;
-        width: 150px;
+        width: 190px;
     }
     .dark-light label{
         width: 50px;
@@ -200,19 +204,17 @@ body{
 
     display: flex;
 }
-@media (max-width: 600px) {
+@media (max-width: 425px) {
     .mainbody{
         width: 100%;
-        flex-direction: row;
+        display: block;
     }
 } 
 /* main content here */
 .content-body{
     width: 70%;
-    height: 2000px;
-    float: left;
 }
-@media (max-width: 320px) {
+@media (max-width: 425px) {
     .content-body{
         width: 100%;
     }
@@ -221,13 +223,115 @@ body{
 /* side content here */
 .side-content{
     margin-left: 15px;
-    background-color: blue;
+    background-color: var(--box-bg-color);
     width: 30%;
-    height: 100px;
+    height: fit-content;
 }
-@media (max-width: 320px) {
+.pop-side{
+    color: var(--text-color);
+    padding: 10px;
+    border-bottom: 1px solid var(--border-bottom-color);
+}
+.pop-time{
+    padding: 10px;
+    
+}
+.pop-list ul{
+    background-color: var(--pop-time-bg);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    border-radius: 2px;
+}
+.pop-list ul li{
+    list-style: none;
+}
+.pop-list ul li button {
+    border: none;
+    background-color: var(--nav-bg-blue);
+    width: 100px;
+    padding: 3px;
+    border-radius: 2px;
+    cursor: pointer;
+    color: var(--li-blue-color);
+}
+.pop-list ul li button:hover{
+    background-color: white;
+    color: black;
+}
+.manhwa-pop-list ul li{
+    list-style: none;
+    border-bottom: 1px solid var(--border-bottom-color); 
+    height: 100px;
+    padding-top: 10px;
+    overflow: hidden;
+}
+.pop-manhwa-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.number{
+    border: 1.5px solid var(--border-color);
+    height: 30px;
+    width: 35px;
+    border-radius: 5px;
+    margin-left: 10px;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+.pop-manhwa-image img{
+    width: 70px;
+    height: 95px;
+}
+.pop-title-rating{
+    height: 100px;
+    width: 200px;
+}
+.pop-title-rating a{
+    color: var(--text-color);
+}
+.pop-title-rating a:hover{
+    color: #a248fc;
+}
+.pop-gener{
+    font-size: 12px;
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+    height: 30px;
+    overflow: hidden;
+    color: var(--text-color);
+}
+.gener-link{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.gener-link a{
+    color: var(--text-color);
+}
+.pop-rating{
+    margin-top: 10px;
+    font-size: 11px;
+    color: var(--text-color);
+}
+
+@media (max-width: 425px) {
     .side-content{
-        display: block;
+        margin: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+    .pop-list ul li button {
+        width: 130px;
+    }
+    .pop-title-rating{
+        width: 300px;
     }
 }
 .wrapper{
@@ -323,7 +427,7 @@ body{
     width: 150px;
     height: 200px;
 }
-@media (max-width: 320px) {
+@media (max-width: 425px) {
     .container{
         width: 100%;
     }
@@ -341,8 +445,17 @@ body{
         height: 150px;
     }
     .title-type{
-        width: 100px;
+        width: 280px;
+        height: 60px;
         overflow: hidden;
+    }
+    .gener{
+        width: 280px;
+        margin-top: 15px;
+        color: white;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
     .title-ratingstar{
         height: 30px;
@@ -360,7 +473,7 @@ body{
     margin-left: 20px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 425px) {
     .weekly-trend{
         display: none;
     }
@@ -369,7 +482,6 @@ body{
 /* Popular Today body */
 .popular-today{
     width: 100%;
-    height: 350px;
     background-color: var(--box-bg-color);
     margin-top: 40px;
     color: var(--text-color);
@@ -409,6 +521,27 @@ body{
 }
 .chaps-rating p{
     margin-top: 2px;
+}
+@media (max-width: 425px) {
+    .popContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .popContainer .last{
+        display: none;
+    }
+    .popbox{
+        width: 195px;
+        height: 320px;
+        margin-top: 10px;
+    }
+    .popimage{
+        width: 195px;
+    }
+    .popimage img{
+        width: 195px;
+        height: 250px;
+    }
 }
 
 /* main post body */
