@@ -436,6 +436,7 @@ body{
     }
     .section-slider{
         padding: 5px;
+        width: 400px;
     }
     .content-image{
         padding: 15px;
@@ -613,8 +614,36 @@ body{
 
 /* footer here */
 .footer {
-    background-color: blue;
     width: 100%;
-    height: 100px;
     margin-top: 20px;
+    height: fit-content;
+}
+.footerlist{
+    background-color: var(--nav-bg-blue);
+}
+.footerlist ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.footerlist ul li{
+    list-style: none;
+    padding: 6px;
+}
+.footerlist ul li:hover{
+    background-color: #5e2992;
+}
+.footerlist ul li a{
+    color: var(--li-blue-color);
+}
+.footerlogo{
+    background-color: var(--body-bg-color);
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+}
+.footerlogo a{
+    color: var(--text-color);
+    background-color: black;
 }
