@@ -159,7 +159,7 @@ body{
 
 @media (max-width: 425px) {
     .centernav{
-        max-width: 410px;
+        max-width: 400px;
         margin: 0 auto;
         height: 50px;
     }
@@ -327,11 +327,14 @@ body{
         margin-top: 10px;
         width: 100%;
     }
+    .pop-list ul{
+        width: 380px;
+    }
     .pop-list ul li button {
-        width: 130px;
+        width: 110px;
     }
     .pop-title-rating{
-        width: 300px;
+        width: 280px;
     }
 }
 .wrapper{
@@ -431,8 +434,12 @@ body{
     .container{
         width: 100%;
     }
+    .section-slider{
+        padding: 5px;
+    }
     .content-image{
-        padding: 4px;
+        padding: 15px;
+        gap: 5px;
     }
     .rating{
         font-size: 20px;
@@ -445,9 +452,15 @@ body{
         height: 150px;
     }
     .title-type{
-        width: 280px;
+        width: 270px;
+        height: 50px;
+        overflow: hidden;
+    }
+    .crausal-summary{
         height: 60px;
         overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: wrap;
     }
     .gener{
         width: 280px;
@@ -526,20 +539,21 @@ body{
     .popContainer{
         display: flex;
         flex-wrap: wrap;
+        gap: 25px;
     }
     .popContainer .last{
         display: none;
     }
     .popbox{
-        width: 195px;
+        width: 190px;
         height: 320px;
         margin-top: 10px;
     }
     .popimage{
-        width: 195px;
+        width: 190px;
     }
     .popimage img{
-        width: 195px;
+        width: 190px;
         height: 250px;
     }
 }
@@ -590,6 +604,11 @@ body{
     color: var(--text-color);
     margin-top: 10px;
     font-size: 14px;
+}
+@media (max-width: 425px) {
+    .manhwa-container{
+        display: block;
+    }
 }
 
 /* footer here */
