@@ -399,10 +399,16 @@ body{
     right: 10px;
     color: white;
 }
+.navigation{
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    width: 640px;
+    justify-content: center;
+}
 .content-image{
     display: flex;
     padding: 20px;
-    z-index: 1;
 }
 .title{
     color: rgb(255, 255, 255);
@@ -440,7 +446,7 @@ body{
     width: 150px;
     height: 200px;
 }
-@media (max-width: 375px) {
+@media only screen and (max-width: 375px) {
     .container{
         width: 100%;
     }
@@ -676,4 +682,104 @@ body{
 .footerlogo a{
     color: var(--text-color);
     background-color: black;
+}
+@media (max-width: 300px) {
+    .centernav{
+        width: 280px;
+    }
+    .search-holder{
+        width: 140px; 
+    }
+    .logo{
+        font-size: 25px;
+        padding-top: 10px;
+    }
+    .content-image{
+        width: 280px;
+    }
+    .title-rating{
+        width: 175px;
+    }
+    .title-rating p{
+        font-size: 13px;
+    }
+    .title-type a{
+        font-size: 12px;
+    }
+    .gener ul li a{
+        font-size: 12px;
+    }
+    .crausal-summary{
+        height: 60px;
+        overflow: hidden;
+    }
+    .popContainer{
+        gap: 5px;
+        padding: 5px;
+    }
+    .popbox{
+        width: 140px;
+        height: 250px;
+        border: 1px solid white;
+    }
+    .chaps-rating p{
+        font-size: 11px;
+    }
+    .popimage{
+        width: 100%;
+    }
+    .popimage a{
+        font-size: 14px;
+    }
+    .popimage img{
+        width: 100%;
+        height: 190px;
+    }
+    .manhwabox{
+        height: 170px;
+    }
+    .manhwa-image img{
+        width: 100px;
+        height: 150px;
+    }
+    .title a{
+        font-size: 15px;
+    }
+    .followers-rating p{
+        font-size: 12px;
+    }
+    .pop-list ul{
+        gap: 2px;
+    }
+    .pop-list ul li button{
+        width:90px;
+    }
+    .pop-manhwa-image img{
+        width: 60px;
+        height: 80px;
+    }
+    .pop-title-rating{
+        width: 160px;
+        overflow: hidden;
+        height: 80px;
+    }
+    .pop-title-rating a{
+        font-size: 14px;
+    }
+    .pop-gener{
+        font-size: 11px;
+        height: 26px;
+    }
+    .pop-gener a{
+        font-size: 11px;
+    }
+    .footerlist ul li a{
+        font-size: 10px;
+    }
+    .footerlist ul{
+        gap: 5px;
+    }
+    .footerlist ul li {
+        padding: 1px;
+    }
 }
